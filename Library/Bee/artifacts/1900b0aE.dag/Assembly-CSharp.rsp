@@ -340,10 +340,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/AssetsPack/Map/BrokenVector/LowPolyFencePack/Scripts/DoorController.cs"
 "Assets/AssetsPack/Map/BrokenVector/LowPolyFencePack/Scripts/DoorToggle.cs"
+"Assets/Script/Character/Enemy/EnemyController.cs"
 "Assets/Script/Character/Manager/MouseManager.cs"
-"Assets/Script/Character/Player/EnemyController.cs"
 "Assets/Script/Character/Player/PlayerController.cs"
 "Assets/Script/Character/Player/PlayerMove.cs"
+"Assets/Script/CharacterStats/ScriptableObject/CharacterData_SO.cs"
 "Assets/Script/Tool/SingleTon.cs"
 -langversion:8.0
 

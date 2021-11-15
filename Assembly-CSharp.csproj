@@ -57,12 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Character\Player\PlayerController.cs" />
+    <Compile Include="Assets\Script\Character\Enemy\EnemyController.cs" />
+    <Compile Include="Assets\Script\CharacterStats\ScriptableObject\CharacterData_SO.cs" />
     <Compile Include="Assets\Script\Character\Player\PlayerMove.cs" />
     <Compile Include="Assets\Script\Tool\SingleTon.cs" />
     <Compile Include="Assets\AssetsPack\Map\BrokenVector\LowPolyFencePack\Scripts\DoorController.cs" />
     <Compile Include="Assets\AssetsPack\Map\BrokenVector\LowPolyFencePack\Scripts\DoorToggle.cs" />
     <Compile Include="Assets\Script\Character\Manager\MouseManager.cs" />
-    <Compile Include="Assets\Script\Character\Player\EnemyController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\AssetsPack\SkyBox\Fantasy Skybox FREE\Readme.txt" />

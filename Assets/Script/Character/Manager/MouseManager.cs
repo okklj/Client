@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MySingleTon;
+using System;
 public class MouseManager :SingleTon<MouseManager>
 {
     public Texture2D point, doorway, attack, target, arrow;
     RaycastHit hitInfo;
 
+    public event Action<GameObject> OnEnemyClicked;
     private void Update()
     {
         SetCursorTexture();
+        MouseControl();
     }
 
     void SetCursorTexture()//设置鼠标贴图
@@ -29,6 +32,18 @@ public class MouseManager :SingleTon<MouseManager>
                 default:
                     Cursor.SetCursor(arrow, new Vector2(16, 16), CursorMode.Auto);
                     break;
+            }
+        }
+    }
+
+    void MouseControl()
+    {
+        if (Input.GetMouseButtonDown(0) && hitInfo.collider != null)
+        {
+            if (hitInfo.collider.gameObject.CompareTag("Enemy"))
+            {
+                //启动所有注册了OnEnemyClicked的事件
+                OnEnemyClicked?.Invoke(hitInfo.collider.gameObject);
             }
         }
     }
