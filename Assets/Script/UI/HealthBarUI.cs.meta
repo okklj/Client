@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: c57cc949a24a7c840b41b6ddec7db569
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - healthUIPrefab: {fileID: 6677228353462020514, guid: 3a42389a7700dbc4bbc92d12c5296904, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,22 +8,31 @@ public class PlayerController : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Animator anim;
+    private CharacterStats characterStats;
 
     private GameObject attackTarget;//攻击目标
     private float lastAttackTime;//冷却时间
+
+    public bool isDead;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        characterStats = GetComponent<CharacterStats>();
     }
     private void Start()
     {
         MouseManager.Instance.OnEnemyClicked += AttackTarget;
+        GameManager.Instance.RigisterPlayer(this.characterStats);
     }
     private void Update()
     {
+        isDead = characterStats.CurrentHealth == 0;
+        if (isDead)
+        {
+            GameManager.Instance.NotifyObserver();
+        }
         SwitchAnimation();
-
         lastAttackTime -= Time.deltaTime;
     }
 
@@ -31,22 +40,46 @@ public class PlayerController : MonoBehaviour
     private void SwitchAnimation()
     {
         anim.SetFloat("Speed",Mathf.Abs(agent.velocity.sqrMagnitude));
+        anim.SetBool("Death", isDead);
     }
 
     private void AttackTarget(GameObject target)
     {
+        if (isDead) return;
         if (target != null)
         {
             attackTarget = target;
         }
-        //TODO:修改攻击参数范围
-        if (Vector3.Distance(attackTarget.transform.position, transform.position) > 3) return;
+        if (Vector3.Distance(attackTarget.transform.position, transform.position) > characterStats.attackData.attackRange) return;
+        if (!transform.IsFacingTarget(target.transform)) return;
         //Attack
         if (lastAttackTime < 0&&Input.GetKeyDown(KeyCode.Mouse0))
         {
+            characterStats.isCritical = Random.value < characterStats.attackData.criticalChance;
+            anim.SetBool("Critical", characterStats.isCritical);
             anim.SetTrigger("Attack");
             //重置冷却时间
-            lastAttackTime = 0.5f;
+            lastAttackTime = characterStats.attackData.coolDown;
+        }
+    }
+
+    //Animation Event
+    void Hit()
+    {
+        if (attackTarget == null) return;
+        if (attackTarget.CompareTag("Attackable"))
+        {
+            if (attackTarget.GetComponent<Rock>())
+            {
+                attackTarget.GetComponent<Rock>().rockStates = Rock.RockStates.HitEnemy;
+                attackTarget.GetComponent<Rigidbody>().AddForce(transform.forward * 20f, ForceMode.Impulse);
+                attackTarget.GetComponent<Rigidbody>().velocity = Vector3.one;
+            }
+        }
+        else
+        {
+            var targetStats = attackTarget.GetComponent<CharacterStats>();
+            CharacterStats.TakeDamge(characterStats, targetStats);
         }
     }
 }
