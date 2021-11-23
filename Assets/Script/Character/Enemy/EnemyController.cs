@@ -161,7 +161,7 @@ public class EnemyController : MonoBehaviour,IEndGameOberver
                 agent.speed = speed;
                 if (!FoundPlayer())
                 {
-                    //TODO:拉脱回到上一个状态
+                    //拉脱回到上一个状态
                     isFollow = false;
                     if (remainLookAtTime > 0)
                     {

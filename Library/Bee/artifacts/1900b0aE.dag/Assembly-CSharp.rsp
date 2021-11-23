@@ -353,10 +353,14 @@
 "Assets/Script/Combat/AttackData_SO.cs"
 "Assets/Script/Manager/GameManager.cs"
 "Assets/Script/Manager/MouseManager.cs"
+"Assets/Script/Manager/SceneController.cs"
 "Assets/Script/Tool/ExtensionMethod.cs"
 "Assets/Script/Tool/IEndGameOberver.cs"
 "Assets/Script/Tool/SingleTon.cs"
+"Assets/Script/Transition/TransitionDestination.cs"
+"Assets/Script/Transition/TransitionPoint.cs"
 "Assets/Script/UI/HealthBarUI.cs"
+"Assets/Script/UI/PlayerHealthUI.cs"
 -langversion:8.0
 
 /deterministic

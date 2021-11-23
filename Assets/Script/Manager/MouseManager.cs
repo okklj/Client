@@ -9,6 +9,12 @@ public class MouseManager :SingleTon<MouseManager>
     RaycastHit hitInfo;
 
     public event Action<GameObject> OnEnemyClicked;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(this);
+    }
     private void Update()
     {
         SetCursorTexture();

@@ -22,8 +22,18 @@ public class PlayerController : MonoBehaviour
     }
     private void Start()
     {
-        MouseManager.Instance.OnEnemyClicked += AttackTarget;
         GameManager.Instance.RigisterPlayer(this.characterStats);
+    }
+    private void OnEnable()
+    {
+        MouseManager.Instance.OnEnemyClicked += AttackTarget;
+    }
+
+    private void OnDisable()
+    {
+        if (!GameManager.IsInitialized) return;
+        //人物重新加载一定要取消订阅。
+        MouseManager.Instance.OnEnemyClicked -= AttackTarget;
     }
     private void Update()
     {
@@ -78,6 +88,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            if (attackTarget.GetComponent<CharacterStats>().CurrentHealth <= 0) return;
             var targetStats = attackTarget.GetComponent<CharacterStats>();
             CharacterStats.TakeDamge(characterStats, targetStats);
         }

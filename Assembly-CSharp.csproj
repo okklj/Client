@@ -59,21 +59,25 @@
     <Compile Include="Assets\Script\Tool\ExtensionMethod.cs" />
     <Compile Include="Assets\Script\CharacterStats\MonoBehavior\CharacterStats.cs" />
     <Compile Include="Assets\Script\Character\Player\PlayerController.cs" />
+    <Compile Include="Assets\Script\UI\HealthBarUI.cs" />
     <Compile Include="Assets\Script\Character\Enemy\EnemyController.cs" />
     <Compile Include="Assets\Script\Character\Enemy\Golem\Rock.cs" />
     <Compile Include="Assets\Script\CharacterStats\ScriptableObject\CharacterData_SO.cs" />
+    <Compile Include="Assets\Script\UI\PlayerHealthUI.cs" />
     <Compile Include="Assets\Script\AnimationBehavior\StopAgent.cs" />
     <Compile Include="Assets\Script\Character\Player\PlayerMove.cs" />
     <Compile Include="Assets\Script\Combat\AttackData_SO.cs" />
     <Compile Include="Assets\Script\Tool\SingleTon.cs" />
     <Compile Include="Assets\AssetsPack\Map\BrokenVector\LowPolyFencePack\Scripts\DoorController.cs" />
     <Compile Include="Assets\Script\Tool\IEndGameOberver.cs" />
+    <Compile Include="Assets\Script\Transition\TransitionDestination.cs" />
     <Compile Include="Assets\AssetsPack\Map\BrokenVector\LowPolyFencePack\Scripts\DoorToggle.cs" />
     <Compile Include="Assets\Script\Manager\GameManager.cs" />
     <Compile Include="Assets\Script\Manager\MouseManager.cs" />
     <Compile Include="Assets\Script\Character\Enemy\Grunt\Grunt.cs" />
     <Compile Include="Assets\Script\Character\Enemy\Golem\Golem.cs" />
-    <Compile Include="Assets\Script\UI\HealthBarUI.cs" />
+    <Compile Include="Assets\Script\Transition\TransitionPoint.cs" />
+    <Compile Include="Assets\Script\Manager\SceneController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\AssetsPack\SkyBox\Fantasy Skybox FREE\Readme.txt" />
@@ -698,8 +702,8 @@
     <Reference Include="VSSettingsProvider">
       <HintPath>Library\ScriptAssemblies\VSSettingsProvider.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder">
       <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
@@ -716,14 +720,17 @@
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Polybrush.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Polybrush.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Polybrush">
       <HintPath>Library\ScriptAssemblies\Unity.Polybrush.dll</HintPath>
@@ -766,9 +773,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

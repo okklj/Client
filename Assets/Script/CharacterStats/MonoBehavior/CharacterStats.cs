@@ -105,7 +105,11 @@ public class CharacterStats : MonoBehaviour
         }
         //update UI
         defener.UpdateHealthBarOnAttack?.Invoke(defener.CurrentHealth,defener.MaxHealth);
-        //TODO:update 经验值
+        //update 经验值
+        if (defener.CurrentHealth <= 0)
+        {
+            attacker.characterData.UpdateExp(defener.characterData.killPoint);
+        }
     }
 
     public static void TakeDamge(int damage,CharacterStats defener)
@@ -113,6 +117,11 @@ public class CharacterStats : MonoBehaviour
         int currentDamage= Mathf.Max(1, damage - defener.CurrentDefence);
         defener.CurrentHealth = Mathf.Max(defener.CurrentHealth - currentDamage, 0);
         defener.UpdateHealthBarOnAttack?.Invoke(defener.CurrentHealth, defener.MaxHealth);
+        //将击败石头人的经验值加上
+        if (defener.CurrentHealth <= 0)
+        {
+            GameManager.Instance.playerStats.characterData.UpdateExp(defener.characterData.killPoint);
+        }
     }
 
     private int CurrentDamage()
