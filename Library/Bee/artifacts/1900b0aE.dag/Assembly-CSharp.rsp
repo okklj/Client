@@ -341,6 +341,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/AssetsPack/Map/BrokenVector/LowPolyFencePack/Scripts/DoorController.cs"
 "Assets/AssetsPack/Map/BrokenVector/LowPolyFencePack/Scripts/DoorToggle.cs"
+"Assets/Font/Fonts/Script/scriptTexttest.cs"
 "Assets/Script/AnimationBehavior/StopAgent.cs"
 "Assets/Script/Character/Enemy/EnemyController.cs"
 "Assets/Script/Character/Enemy/Golem/Golem.cs"
@@ -353,6 +354,7 @@
 "Assets/Script/Combat/AttackData_SO.cs"
 "Assets/Script/Manager/GameManager.cs"
 "Assets/Script/Manager/MouseManager.cs"
+"Assets/Script/Manager/SaveManager.cs"
 "Assets/Script/Manager/SceneController.cs"
 "Assets/Script/Tool/ExtensionMethod.cs"
 "Assets/Script/Tool/IEndGameOberver.cs"
@@ -360,7 +362,9 @@
 "Assets/Script/Transition/TransitionDestination.cs"
 "Assets/Script/Transition/TransitionPoint.cs"
 "Assets/Script/UI/HealthBarUI.cs"
+"Assets/Script/UI/MainMenu.cs"
 "Assets/Script/UI/PlayerHealthUI.cs"
+"Assets/Script/UI/SceneFader.cs"
 -langversion:8.0
 
 /deterministic

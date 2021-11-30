@@ -65,22 +65,49 @@
     <Compile Include="Assets\Script\CharacterStats\ScriptableObject\CharacterData_SO.cs" />
     <Compile Include="Assets\Script\UI\PlayerHealthUI.cs" />
     <Compile Include="Assets\Script\AnimationBehavior\StopAgent.cs" />
+    <Compile Include="Assets\Script\UI\MainMenu.cs" />
     <Compile Include="Assets\Script\Character\Player\PlayerMove.cs" />
     <Compile Include="Assets\Script\Combat\AttackData_SO.cs" />
     <Compile Include="Assets\Script\Tool\SingleTon.cs" />
     <Compile Include="Assets\AssetsPack\Map\BrokenVector\LowPolyFencePack\Scripts\DoorController.cs" />
     <Compile Include="Assets\Script\Tool\IEndGameOberver.cs" />
     <Compile Include="Assets\Script\Transition\TransitionDestination.cs" />
+    <Compile Include="Assets\Font\Fonts\Script\scriptTexttest.cs" />
+    <Compile Include="Assets\Script\UI\SceneFader.cs" />
     <Compile Include="Assets\AssetsPack\Map\BrokenVector\LowPolyFencePack\Scripts\DoorToggle.cs" />
     <Compile Include="Assets\Script\Manager\GameManager.cs" />
     <Compile Include="Assets\Script\Manager\MouseManager.cs" />
     <Compile Include="Assets\Script\Character\Enemy\Grunt\Grunt.cs" />
-    <Compile Include="Assets\Script\Character\Enemy\Golem\Golem.cs" />
-    <Compile Include="Assets\Script\Transition\TransitionPoint.cs" />
     <Compile Include="Assets\Script\Manager\SceneController.cs" />
+    <Compile Include="Assets\Script\Character\Enemy\Golem\Golem.cs" />
+    <Compile Include="Assets\Script\Manager\SaveManager.cs" />
+    <Compile Include="Assets\Script\Transition\TransitionPoint.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\AssetsPack\SkyBox\Fantasy Skybox FREE\Readme.txt" />
+     <None Include="Assets\Font\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Font\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity 2021.1.7f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

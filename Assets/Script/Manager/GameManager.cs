@@ -43,4 +43,17 @@ public class GameManager : SingleTon<GameManager>
             observer.EndNotify();
         }
     }
+
+    public Transform GetEntrance()
+    {
+        var entrances = FindObjectsOfType<TransitionDestination>();
+        foreach (var destination in entrances)
+        {
+            if (destination.destinationTag == TransitionDestination.DestinationTag.ENTER)
+            {
+                return destination.transform;
+            }
+        }
+        return null;
+    }
 }

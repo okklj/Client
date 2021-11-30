@@ -22,16 +22,16 @@ public class PlayerController : MonoBehaviour
     }
     private void Start()
     {
-        GameManager.Instance.RigisterPlayer(this.characterStats);
+        SaveManager.Instance.LoadPlayerData();
     }
     private void OnEnable()
     {
+        GameManager.Instance.RigisterPlayer(this.characterStats);
         MouseManager.Instance.OnEnemyClicked += AttackTarget;
     }
 
     private void OnDisable()
     {
-        if (!GameManager.IsInitialized) return;
         //人物重新加载一定要取消订阅。
         MouseManager.Instance.OnEnemyClicked -= AttackTarget;
     }
